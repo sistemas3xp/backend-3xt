@@ -6,6 +6,7 @@ import { EventEmitterModule } from '@nestjs/event-emitter'
 import { ThrottlerGuard, ThrottlerModule } from '@nestjs/throttler'
 import { APP_GUARD } from '@nestjs/core'
 import { PlayerModule } from './player/player.module'
+import { TTTGateway } from './websocket/ttt.gateway'
 
 //IMPLEMENT RATE LIMIT
 @Module({
@@ -33,7 +34,8 @@ import { PlayerModule } from './player/player.module'
     {
       provide: APP_GUARD,
       useClass: ThrottlerGuard
-    }
+    },
+    TTTGateway
   ]
 })
 export class AppModule {}

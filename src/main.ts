@@ -10,7 +10,7 @@ import { TimeoutInterceptor } from './common/timeout.interceptor'
 import { setCronJob } from './crons/count-conn-job'
 import { DocumentBuilder, SwaggerModule } from '@nestjs/swagger'
 import { PROJECT_NAME, PROJECT_DESCRIPTION, PROJECT_VERSION } from './constants'
-
+Logger.log('pinto')
 const DEFAULT_API_VERSION = '1'
 const DEFAULT_SWAGGER_PREFIX = '/docs'
 const DEFAULT_API_PORT = 3000
